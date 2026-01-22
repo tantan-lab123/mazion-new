@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>המציאון: דילים סודיים מעליאקספרס</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1543023473672628');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1543023473672628&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        color: #fff;
+        background-color: #000;
+      }
+
+      .overlay {
+        min-height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)),
+          url("ali_image.png") center center / cover no-repeat fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 16px;
+      }
+
+      .container {
+        max-width: 450px;
+        margin: 0 auto;
+      }
+
+      .badge {
+        background: #ff4747;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        display: inline-block;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin: 0 0 12px;
+        text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+        line-height: 1.1;
+      }
+
+      h1 span {
+        color: #25d366;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        margin: 0 0 24px;
+        opacity: 0.95;
+        line-height: 1.5;
+      }
+
+      .cta-btn {
+        display: block;
+        width: 100%;
+        background: #25d366;
+        color: #fff;
+        font-size: 1.4rem;
+        padding: 18px 20px;
+        border-radius: 12px;
+        font-weight: 800;
+        text-decoration: none;
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+        transition: transform 0.3s ease, background 0.3s ease,
+          box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        animation: cta-ripple 2.4s infinite; /* ripple/pulse loop */
+      }
+
+      /* subtle glowing ripple effect around the button */
+      @keyframes cta-ripple {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+          transform: scale(1);
+        }
+        60% {
+          box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+          transform: scale(1.02);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+          transform: scale(1);
+        }
+      }
+
+      .cta-btn:hover {
+        transform: scale(1.04);
+        background: #1ebe5a;
+      }
+
+      .small-note {
+        font-size: 0.9rem;
+        margin: 18px 0 30px;
+        color: #ddd;
+      }
+
+      /* --- Single Item Carousel --- */
+      .testimonial-wrapper {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        border-radius: 16px;
+        padding: 25px;
+        margin-top: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .testimonial-card {
+        position: absolute;
+        width: 90%;
+        opacity: 0;
+        transition: opacity 0.8s ease-in-out;
+        pointer-events: none;
+      }
+
+      .testimonial-card.active {
+        opacity: 1;
+        position: relative;
+        pointer-events: auto;
+      }
+
+      .testimonial-text {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+
+      .testimonial-author {
+        font-weight: bold;
+        font-size: 0.9rem;
+        color: #25d366;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="container">
+        <div class="badge">הצטרפו ל-5,000+ חסכנים חכמים</div>
+        <h1>דילים שחבל <span>לפספס.</span></h1>
+        <p class="subtitle">
+          קופונים בלעדיים, טעויות מחיר והמציאות הכי שוות מעליאקספרס - לפני כולם
+          ובלי חפירות מיותרות.
+        </p>
+
+        <a
+          class="cta-btn"
+          href="https://chat.whatsapp.com/GUqgTXN1PE804iYs0MeAJP"
+          target="_blank"
+          rel="noopener"
+        >
+          להצטרפות בחינם
+        </a>
+
+        <p class="small-note">
+          ✓ ללא עלות • ✓ ניתן לעזוב בכל עת • ✓ רק דילים איכותיים
+        </p>
+
+        <div class="testimonial-wrapper">
+          <div class="testimonial-card active">
+            <p class="testimonial-text">
+              "הזמנתי שואב אבק בחצי מחיר בזכותכם, תודה!"
+            </p>
+            <p class="testimonial-author">מיכל רוזן</p>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "הקבוצה היחידה שאני לא משתיק. הדילים פשוט פגז."
+            </p>
+            <p class="testimonial-author">אורי פרץ</p>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text">
+              "מצאתי כאן דברים שלא ראיתי בשום מקום אחר."
+            </p>
+            <p class="testimonial-author">יעל בן־דוד</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const cards = document.querySelectorAll(".testimonial-card");
+      let currentIndex = 0;
+
+      function nextTestimonial() {
+        cards[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % cards.length;
+        cards[currentIndex].classList.add("active");
+      }
+
+      setInterval(nextTestimonial, 4000); // Changes every 4 seconds
+    </script>
+  </body>
+</html>
