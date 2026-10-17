@@ -33,7 +33,7 @@
       .overlay {
         min-height: 100vh;
         background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.5)),
-          url("ali_image.png") center center / cover no-repeat fixed;
+          url("ali_image.webp") center center / cover no-repeat;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -47,7 +47,7 @@
       }
 
       .badge {
-        background: #ff4747;
+        background: #d92b2b;
         color: white;
         padding: 4px 12px;
         border-radius: 20px;
@@ -91,14 +91,14 @@
       .cta-btn {
         display: block;
         width: 100%;
-        background: #25d366;
+        background: #0b7d3b;
         color: #fff;
         font-size: 1.4rem;
         padding: 18px 20px;
         border-radius: 12px;
         font-weight: 800;
         text-decoration: none;
-        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+        box-shadow: 0 0 0 0 rgba(11, 125, 59, 0.6);
         transition: transform 0.3s ease, background 0.3s ease,
           box-shadow 0.3s ease;
         position: relative;
@@ -109,22 +109,22 @@
       /* subtle glowing ripple effect around the button */
       @keyframes cta-ripple {
         0% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+          box-shadow: 0 0 0 0 rgba(11, 125, 59, 0.55);
           transform: scale(1);
         }
         60% {
-          box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+          box-shadow: 0 0 0 14px rgba(11, 125, 59, 0);
           transform: scale(1.02);
         }
         100% {
-          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+          box-shadow: 0 0 0 0 rgba(11, 125, 59, 0);
           transform: scale(1);
         }
       }
 
       .cta-btn:hover {
         transform: scale(1.04);
-        background: #1ebe5a;
+        background: #096b32;
       }
 
       .small-note {
@@ -141,16 +141,14 @@
         padding: 25px;
         margin-top: 20px;
         border: 1px solid rgba(255, 255, 255, 0.2);
-        height: 120px;
-        display: flex;
+        display: grid;
         align-items: center;
-        justify-content: center;
-        position: relative;
+        justify-items: center;
         overflow: hidden;
       }
 
       .testimonial-card {
-        position: absolute;
+        grid-area: 1 / 1;
         width: 90%;
         opacity: 0;
         transition: opacity 0.8s ease-in-out;
@@ -159,7 +157,6 @@
 
       .testimonial-card.active {
         opacity: 1;
-        position: relative;
         pointer-events: auto;
       }
 
